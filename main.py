@@ -1,6 +1,5 @@
 import pygame
 from game.constants import *
-from object.block import *
 from object.player import *
 
 def main():
