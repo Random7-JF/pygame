@@ -33,6 +33,7 @@
 .mypy_cache/
 
 # Other
+venv
 envdev*
 .virtualenv*
 buildconfig/manylinux-build/wheelhouse/
