@@ -1,5 +1,6 @@
 import pygame
 from object.block import *
+from game.constants import *
 
 class Player(Block):
     def __init__(self, x, y) -> None:
@@ -7,11 +8,12 @@ class Player(Block):
         self.colour = "blue"
         self.height = 25
         self.width = 150
-        self.move_speed = 250
+        self.move_speed = PLAYER_MOVE_SPEED
     
     def draw(self, screen) -> None:
-        xpos = self.position.x - (self.width // 2)
-        ypos = self.position.y - (self.height // 2)
+        xpos = self.position.x - self.width
+        ypos = self.position.y - self.height
+       # print("(x,y)", self.position, "width:", self.width, "height:", self.height, "xpos:", xpos, "ypos:", ypos)
         pygame.draw.rect(screen, self.colour, pygame.Rect(xpos, ypos, self.width, self.height), 4) 
 
     def update(self, delta_time):
