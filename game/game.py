@@ -1,15 +1,14 @@
 import pygame
 from game.constants import *
+from game.manager import *
 
 class Game():
     def __init__(self):
         self.delta_time = 0.0
         self.clock = pygame.time.Clock()
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    
-    def spawn_manager():
-        pass
-    
+        self.manager = Manager()
+      
     def run(self):
         while True:
             self.screen.fill("black")
@@ -17,17 +16,12 @@ class Game():
                 if event.type == pygame.QUIT:
                     return
             # Iterate over Object groups and call update
+            for obj in self.manager.update_group:
+                obj.update(self.delta_time)
             # Iterate over Object groups and call draw
+            for obj in self.manager.draw_group:
+                obj.draw(self.screen)
         
             pygame.display.flip()
             self.delta_time = (self.clock.tick(60) / 1000)
 
-    ##Add function to add object group to Draw calls
-    def add_group_to_draw(self, group):
-        pass
-    ##Add function to add object group to Update calls
-    def add_group_to_update(self, group):
-        pass
-    ##Add function to add object to object group
-    ##Remove Object from object group
-    ##Remove Object group from groups
