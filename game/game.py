@@ -6,8 +6,9 @@ class Game():
         self.delta_time = 0.0
         self.clock = pygame.time.Clock()
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-        
-
+    
+    def spawn_manager():
+        pass
     
     def run(self):
         while True:
