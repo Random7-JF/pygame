@@ -23,3 +23,5 @@ class Player(Block):
             self.position.x = self.position.x - self.move_speed * delta_time
         if keys[pygame.K_d]:
             self.position.x = self.position.x + self.move_speed * delta_time
+        if keys[pygame.K_ESCAPE]:
+            pygame.quit()
