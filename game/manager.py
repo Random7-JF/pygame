@@ -31,14 +31,7 @@ class Manager():
         level = Level("level1")
         level.load_level()
 
-        # I want to load a map in here.
-        block = Block(400, 400)
-        block2 = Block(900, 400)
-        block3 = Block(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-
-        self.add_group_to_draw(block)
-        self.add_group_to_update(block)
-        self.add_group_to_draw(block2)
-        self.add_group_to_update(block2)
-        self.add_group_to_draw(block3)
-        self.add_group_to_update(block3)
+        for block in level.level_coords:
+            new_block = Block(block[0], block[1])
+            self.add_group_to_draw(new_block)
+            self.add_group_to_update(new_block)
