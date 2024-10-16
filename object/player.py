@@ -14,7 +14,7 @@ class Player(Block):
         xpos = self.position.x - self.width
         ypos = self.position.y - self.height
        # print("(x,y)", self.position, "width:", self.width, "height:", self.height, "xpos:", xpos, "ypos:", ypos)
-        pygame.draw.rect(screen, self.colour, pygame.Rect(xpos, ypos, self.width, self.height), 4) 
+        pygame.draw.rect(screen, self.colour, pygame.Rect(xpos, ypos, self.width, self.height)) 
 
     def update(self, delta_time):
         keys = pygame.key.get_pressed()

@@ -1,6 +1,7 @@
 import pygame
 from object.player import *
 from object.block import *
+from object.ball import *
 from game.constants import *
 from game.level import *
 
@@ -35,3 +36,7 @@ class Manager():
             new_block = Block(block[0], block[1])
             self.add_group_to_draw(new_block)
             self.add_group_to_update(new_block)
+        
+        ball = Ball(250,250,10)
+        self.add_group_to_draw(ball)
+        self.add_group_to_update(ball)

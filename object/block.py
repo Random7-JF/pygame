@@ -14,5 +14,5 @@ class Block(pygame.sprite.Sprite):
         pygame.draw.rect(screen, "white", pygame.Rect(xpos, ypos, self.width, self.height), 4) 
 
 
-    def update(self, screen):
+    def update(self, delta_time):
         pass 
