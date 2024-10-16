@@ -2,6 +2,7 @@ import pygame
 from object.player import *
 from object.block import *
 from game.constants import *
+from game.level import *
 
 class Manager():
     def __init__(self):
@@ -27,6 +28,9 @@ class Manager():
         self.add_group_to_update(self.player)
 
     def spawn_level(self):
+        level = Level("level1")
+        level.load_level()
+
         # I want to load a map in here.
         block = Block(400, 400)
         block2 = Block(900, 400)
