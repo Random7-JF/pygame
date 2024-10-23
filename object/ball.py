@@ -10,8 +10,8 @@ class Ball(pygame.sprite.Sprite):
         self.rotation = 0
     
     def draw(self, screen):
-        pygame.draw.circle(screen, "white", self.position, self.radius)
+        pygame.draw.circle(screen, "white", (self.position.x, self.position.y), self.radius)
     
     def update(self, delta_time):
-        pass
-        #self.position = self.position + BALL_SPEED * delta_time
+        self.velocity.y = BALL_SPEED * delta_time
+        self.position.y += self.velocity.y
