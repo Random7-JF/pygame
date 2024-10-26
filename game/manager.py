@@ -37,6 +37,6 @@ class Manager():
             self.add_group_to_draw(new_block)
             self.add_group_to_update(new_block)
         
-        ball = Ball(250,250,10)
+        ball = Ball(SCREEN_WIDTH/2,SCREEN_HEIGHT/2,10)
         self.add_group_to_draw(ball)
         self.add_group_to_update(ball)
