@@ -23,5 +23,5 @@ class Game():
                 obj.draw(self.screen)
         
             pygame.display.flip()
-            self.delta_time = (self.clock.tick(60) / 1000)
+            self.delta_time = (self.clock.tick(144) / 1000)
 
